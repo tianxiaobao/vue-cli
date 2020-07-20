@@ -1,0 +1,11 @@
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "modules": false,
+            "targets": {
+                "browsers": ["> 1%", "last 2 versions", "not ie <= 9"]
+            }, // 使用率大于1%的浏览器，最新两个版本不需要
+            "useBuiltIns": "entry" // 按需引入，即使用什么新特性打包什么新特性，可以减小打包的体积
+        }]
+    ]
+}
