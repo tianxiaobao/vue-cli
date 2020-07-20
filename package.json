@@ -1,7 +1,7 @@
 {
-  "name": "vue-cli",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "",
+  "description": "vue框架的h5工程",
   "scripts": {
     "dev": "cross-env API_ENV=dev webpack-dev-server --inline --progress --config build/webpack.dev.config.js",
     "test": "cross-env API_ENV=test webpack --config build/webpack.prod.config.js",
@@ -24,11 +24,13 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.0.3",
     "husky": "^4.2.3",
+    "lib-flexible": "^0.3.2",
     "lint-staged": "^10.0.10",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
+    "postcss-px2rem-exclude": "0.0.6",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "uglifyjs-webpack-plugin": "^2.2.0",

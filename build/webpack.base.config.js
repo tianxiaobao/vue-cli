@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require("webpack");
 const path = require("path");
+const px2rem = require("postcss-px2rem-exclude");
 const devMode = process.env.API_ENV === 'dev';
 
 module.exports = {
@@ -47,7 +48,11 @@ module.exports = {
                         options: {
                             ident: 'postcss',
                             plugins: () => [
-                                require('autoprefixer')()
+                                require('autoprefixer')(),
+                                px2rem({
+                                    remUnit: 75,
+                                    exclude: /node_modules/i
+                                })
                             ]
                         }
                     },
